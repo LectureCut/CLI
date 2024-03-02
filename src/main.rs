@@ -3,7 +3,7 @@ extern crate console;
 extern crate indicatif;
 extern crate clap;
 
-mod argmunents;
+mod arguments;
 mod printer;
 mod helper;
 mod module_manager;
@@ -17,7 +17,7 @@ use std::collections::HashMap;
 use std::path::Path;
 use std::sync::Mutex;
 
-use argmunents::{parse_args, validate_args, Options};
+use arguments::{parse_args, validate_args, Options};
 use indicatif::ProgressBar;
 use indicatif::ProgressStyle;
 use module_manager::GeneratorStats;
