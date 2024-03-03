@@ -16,8 +16,8 @@ use self::libloading::Library;
 
 #[repr(C)]
 pub struct Cut {
-  pub start: c_double,
-  pub end: c_double,
+  pub start: i64,
+  pub end: i64,
 }
 
 #[repr(C)]
