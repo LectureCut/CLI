@@ -1,6 +1,5 @@
 <div align="center">
   <img src=".github/static/Logo.svg" width=100/>
-  <span style="font-family: Roboto Flex, Roboto; font-size: 1.5em;">CLI</span>
 </div>
 
 ---
