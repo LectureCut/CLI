@@ -3,6 +3,7 @@ extern crate tabled;
 extern crate ellipse;
 
 use std::path;
+use std::cmp::max;
 use std::path::Path;
 use std::time::Duration;
 
@@ -68,8 +69,8 @@ pub fn greetings(render_version: &str, generator_version: &str) {
   }
   
   // manually center l7, because console does not support links...
-  let padding = term.size().1 - 85;
-  let l7_padded = " ".repeat((padding / 2).into()) + &l7;
+  let padding = max((term.size().1 as i16) - 85, 0) as usize;
+  let l7_padded = " ".repeat(padding / 2) + &l7;
   if let Err(e) = term.write_line(&l7_padded) {
     println!("Error: {}", e);
   }
